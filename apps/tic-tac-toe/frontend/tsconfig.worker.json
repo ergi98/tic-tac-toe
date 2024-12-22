@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./public/workers",
+    "module": "ES6",
+    "skipLibCheck": true,
+    "lib": ["WebWorker", "ES6"],
+    "noEmit": false,
+    "sourceMap": false
+  },
+  "include": ["workers/**/*.ts"]
+}

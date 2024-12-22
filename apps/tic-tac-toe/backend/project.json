@@ -1,0 +1,29 @@
+{
+  "name": "ttt-backend",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/tic-tac-toe/backend/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "ttt-backend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "ttt-backend:build:development"
+        },
+        "production": {
+          "buildTarget": "ttt-backend:build:production"
+        }
+      }
+    },
+    "build": {
+      "options": {
+        "generatePackageJson": true
+      }
+    }
+  }
+}
